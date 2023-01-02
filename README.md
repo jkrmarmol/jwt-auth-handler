@@ -18,10 +18,10 @@ For more library I used. visit `package.json`
 
 ## In backend there are only 3 endpoint
 
-/login - uses body to login your account `{username: <username>, password: <password>}`
+POST /login - uses body to login your account `{username: <username>, password: <password>}`
 
-/register - uses body to registered your account `{username: <username>, password: <password>}`
+POST /register - uses body to registered your account `{username: <username>, password: <password>}`
 
-/protected - once you have loged in,  it throw you access token and you should use it to authenticate this endpoint. Add this to your header `'Authorization': 'Bearer <token>'`
+GET /protected - once you have loged in,  it throw you access token and you should use it to authenticate this endpoint. Add this to your header `'Authorization': 'Bearer <token>'`
 
-TAKE NOTE: the endpoint would start with `/api`. For example you want to access `/protected` your path would be `/api/protected`
+TAKE NOTE: the endpoint would start with `/api`. For example you want to access `/protected` your path would be `/api/protected`. POST request mandatory to use `Content-Type: 'application/json'`.
